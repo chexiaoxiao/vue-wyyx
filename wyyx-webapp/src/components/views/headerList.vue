@@ -15,7 +15,7 @@
         name: "headerList",
         methods:{
             changeColor(u){
-                this.index=u;
+                this.index=u
             }
         }
     }
@@ -33,8 +33,8 @@ a{
     padding-bottom: 0.02rem;
 }
     .red{
-        color: red;
-        border-bottom:0.03rem solid red;
+        color: #d81e06;
+        border-bottom:0.03rem solid #d81e06;
     }
     .black{
         color: black;

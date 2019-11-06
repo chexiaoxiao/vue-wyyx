@@ -1,10 +1,17 @@
 <template>
-    $END$
+    <div>
+    <router-view></router-view>
+    <v-footer></v-footer>
+    </div>
 </template>
 
 <script>
+    import vFooter from "./views/vfooter";
     export default {
-        name: "main"
+        name: "main",
+        components:{
+            vFooter
+        }
     }
 </script>
 

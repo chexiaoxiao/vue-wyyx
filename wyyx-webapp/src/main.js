@@ -1,12 +1,12 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from '../router/router'
-import "../src/assets/style.css"
-import 'swiper/dist/css/swiper.css'
-import { swiper, swiperSlide } from 'vue-awesome-swiper'
+import "./assets/style.css"
+import 'swiper/css/swiper.css';
+
 Vue.use(router);
-Vue.use(swiper);
-Vue.use(swiperSlide);
+
+
 
 Vue.config.productionTip = false;
 

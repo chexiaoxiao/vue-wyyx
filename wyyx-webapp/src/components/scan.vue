@@ -1,10 +1,14 @@
 <template>
-    $END$
+<scan-header></scan-header>
 </template>
 
 <script>
+    import scanHeader from "./views/scanHeader";
     export default {
-        name: "scan"
+        name: "scan",
+        components:{
+            scanHeader
+        }
     }
 </script>
 

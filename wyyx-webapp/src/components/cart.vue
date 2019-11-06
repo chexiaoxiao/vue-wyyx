@@ -1,5 +1,5 @@
 <template>
-    $END$
+    <p>4444444444</p>
 </template>
 
 <script>
