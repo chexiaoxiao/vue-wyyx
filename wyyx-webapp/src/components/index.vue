@@ -1,8 +1,8 @@
 <template>
     <div>
         <v-header></v-header>
-        <headerList></headerList>
-        <swiper></swiper>
+        <headerList :data="data.headerText"></headerList>
+        <my-swiper :data="data.msg"></my-swiper>
 
         <div class="server">
             <div><img src="../assets/img/1.png" alt=""><span>网易自营品牌</span></div>
@@ -29,18 +29,34 @@
 </template>
 
 <script>
-    import vHeader from "./views/header"
-    import headerList from "./views/headerList"
-    import swiper from "./views/swiper";
-    import container from "./views/container";
+
+    import vHeader from "./views/index/vHeader";
+    import headerList from "./views/index/headerList";
+    import mySwiper from "./views/index/mySwiper";
+    import container from "./views/index/container";
+    import api from "../api/api";
 
     export default {
         name: "index",
         components: {
             vHeader,
             headerList,
-            swiper,
+            mySwiper,
             container
+        },
+        methods:{
+            async _initHomeData(){
+                let data = await api.getIndexData()
+                this.data=data
+            }
+        },
+        beforeMount() {
+            this._initHomeData()
+        },
+        data(){
+            return {
+                data:[]
+            }
         }
 
     }

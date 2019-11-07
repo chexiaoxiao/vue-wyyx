@@ -8,7 +8,7 @@
 <script>
     import vFooter from "./views/vfooter";
     export default {
-        name: "main",
+        name: "vmain",
         components:{
             vFooter
         }
