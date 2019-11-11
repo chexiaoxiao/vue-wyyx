@@ -1,7 +1,7 @@
 module.exports={
     getdata(){
         let c={
-               bannerData: {
+            bannerData: {
                         bannerData1: {
                             title: "双11、黑五有哪些不能错过的好东西？一定要看的购物及必买清单",
                             imgUrl: "../img/good.jpg",
@@ -18,14 +18,22 @@ module.exports={
                             bannerSpan: "81.9k人看过"
                         }
                     },
-                    myImgData: {
+            myImgData: {
                         myImgData1: {
                             imgUrl: "../img/3e6407.jpg"
                         },
                         myImgData2: {
                             imgUrl: "../img/3bcfe.jpg"
                         }
-                    }
+                    },
+            bannerDataText: {
+                textListA: {
+                    name: "哈哈哈"
+                },
+                textListB: {
+                    name: "嘿嘿"
+                }
+            }
         }
         return c
     }

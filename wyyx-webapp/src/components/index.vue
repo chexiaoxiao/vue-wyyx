@@ -23,13 +23,11 @@
             <div class="pink-bottom"><a href="#"><img src="../assets/img/9cc22.png" alt=""></a></div>
         </div>
             <div class="bottom"><img src="../assets/img/14599bb.gif" alt=""></div>
-
     </div>
 
 </template>
 
 <script>
-
     import vHeader from "./views/index/vHeader";
     import headerList from "./views/index/headerList";
     import mySwiper from "./views/index/mySwiper";

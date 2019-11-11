@@ -1,7 +1,7 @@
 <template>
     <div class="swiper-container">
         <div class="swiper-wrapper">
-            <div class="swiper-slide" v-for="data in data" :key="data"><img :src="data.p" alt=""></div>
+            <div class="swiper-slide" v-for="(data,u) in data" :key="u"><img :src="data.p" alt=""></div>
         </div>
         <!-- 如果需要分页器 -->
         <div class="swiper-pagination"></div>

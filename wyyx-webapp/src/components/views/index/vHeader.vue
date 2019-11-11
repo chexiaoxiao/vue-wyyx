@@ -1,13 +1,18 @@
 <template>
     <div class="top">
         <div><a href="#">网易严选</a></div>
-        <div><input type="text" placeholder="搜索商品，共24089款好物" value=""></div>
+        <div><input type="text" placeholder="搜索商品，共24089款好物" value="" @click="changRouter"></div>
     </div>
 </template>
 
 <script>
     export default {
-        name: "vHeader"
+        name: "vHeader",
+        methods:{
+            changRouter(){
+                this.$router.push({path: '/main/seach'})
+            }
+        }
     }
 </script>
 

@@ -1,6 +1,6 @@
 <template>
     <ul>
-        <li v-for="(msg,u) in data.dataList" :key="u"><a href="#" :class="index===u?'red':'normal'" @click="changeStyle(u)">{{msg}}</a></li>
+        <li v-for="(msg,u) in data.dataList" :key="u"><a href="#" :class="index===u?'red':'normal'" @click.prevent="changeStyle(u)">{{msg}}</a></li>
     </ul>
 </template>
 
@@ -15,7 +15,8 @@
         },
         methods: {
             changeStyle(u) {
-                this.index = u
+                this.index = u;
+                this.$emit("listIndex",u)
             }
         },
         props:["data"]
@@ -26,7 +27,6 @@
     ul {
         width: 25%;
         border-right: 0.01rem solid rgb(238, 238, 238);
-
     }
 
     li {

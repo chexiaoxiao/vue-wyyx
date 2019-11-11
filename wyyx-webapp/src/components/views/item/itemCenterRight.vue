@@ -1,8 +1,8 @@
 <template>
     <div class="right">
-        <img src="../../../assets/img/itemtop.png" alt="">
+        <img :src="data.bannerUrl" />
         <div class="right-banner">
-            <div v-for="data in data.nav.dates" :key="data">
+            <div v-for="(data,u) in data.dates" :key="u">
                 <a href="#"><img :src="data.url" alt="">
                     <p>{{data.name}}</p></a>
             </div>
@@ -20,7 +20,7 @@
 <style scoped>
     .right {
         width: 65%;
-        margin-left: 0.15rem;
+        margin: 0 auto;
     }
 
     .right img {
@@ -29,14 +29,15 @@
     .right-banner{
         width:100%;
         display: flex;
-        justify-content: space-between;
         flex-wrap: wrap;
-        margin-left: 0.15rem;
+        margin-top: 0.1rem;
     }
     .right-banner>div{
         width:30%;
         text-align: center;
         font-size: 0.12rem;
+        margin-top: 0.1rem;
+        margin-left: 0.08rem;
     }
     .right-banner>div img{
         width:100%;

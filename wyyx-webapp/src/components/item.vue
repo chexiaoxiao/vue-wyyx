@@ -1,7 +1,7 @@
 <template>
     <div>
     <item-header></item-header>
-    <item-center :data="data"></item-center>
+    <item-center :data="data" v-if="data"></item-center>
     </div>
 </template>
 

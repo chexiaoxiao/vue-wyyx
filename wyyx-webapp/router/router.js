@@ -6,6 +6,7 @@ import item from "../src/components/item"
 import scan from "../src/components/scan"
 import cart from "../src/components/cart"
 import my from "../src/components/my"
+import seach from "../src/components/seach";
 Vue.use(VueRouter)
 
 export default new VueRouter({
@@ -37,7 +38,11 @@ export default new VueRouter({
                 {
                     path: 'my',
                     component: my
-                }
+                },
+                {
+                    path: 'seach',
+                    component: seach
+                },
             ]
         }
     ]

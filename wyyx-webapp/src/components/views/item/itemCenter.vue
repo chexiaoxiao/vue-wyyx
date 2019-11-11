@@ -1,7 +1,9 @@
 <template>
 <div class="con">
-    <item-center-left :data="data"></item-center-left>
-    <item-center-right :data="data"></item-center-right>
+    <item-center-left :data="data" @listIndex="listIndex"></item-center-left>
+    <item-center-right :data="data.nav[u]" v-if="(data.nav && u<4)"></item-center-right>
+    <item-center-right-other :data="data.nav[u]" v-else-if="(data.nav && u>=4)"></item-center-right-other>
+
 </div>
 
 </template>
@@ -9,13 +11,26 @@
 <script>
     import itemCenterLeft from "./itemCenterLeft";
     import itemCenterRight from "./itemCenterRight";
+    import itemCenterRightOther from "./itemCenterRightOther";
     export default {
         name: "itemCenter",
         components:{
             itemCenterLeft,
-            itemCenterRight
+            itemCenterRight,
+            itemCenterRightOther
         },
-        props:["data"]
+        props:["data"],
+        data(){
+            return {
+                u:0,
+                flag:false
+            }
+        },
+        methods:{
+            listIndex(u){
+                this.u=u;
+            }
+        }
     }
 </script>
 
